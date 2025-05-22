@@ -1,0 +1,7 @@
+nimTitle	grammar	npeg/grammar.html	module npeg/grammar		0
+nim	libStore	npeg/grammar.html#libStore,string,Grammar	proc libStore(libName: string; grammar: Grammar)		21
+nim	addRule	npeg/grammar.html#addRule,Grammar,string,Patt,string,LineInfo	proc addRule(grammar: Grammar; name: string; patt: Patt; repr: string = "";\n        lineInfo: LineInfo = LineInfo())		44
+nim	libImportRule	npeg/grammar.html#libImportRule,string,Grammar	proc libImportRule(name: string; grammar: Grammar): bool		56
+nim	libImportTemplate	npeg/grammar.html#libImportTemplate,string	proc libImportTemplate(name: string): Template		64
+nim	shadow	npeg/grammar.html#shadow,Grammar,string	proc shadow(grammar: Grammar; name: string): string		72
+nim	link	npeg/grammar.html#link,Grammar,string,Dot	proc link(grammar: Grammar; initial_name: string; dot: Dot = nil): Program		87

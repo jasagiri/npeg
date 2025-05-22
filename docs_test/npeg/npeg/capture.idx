@@ -1,0 +1,15 @@
+nimTitle	capture	npeg/capture.html	module npeg/capture		0
+nim	Capture	npeg/capture.html#Capture	object Capture		8
+nim	Captures	npeg/capture.html#Captures	object Captures		18
+nim	FixAll	npeg/capture.html#FixAll	FixMethod.FixAll		21
+nim	FixOpen	npeg/capture.html#FixOpen	FixMethod.FixOpen		21
+nim	FixMethod	npeg/capture.html#FixMethod	enum FixMethod		21
+nim	fixCaptures	npeg/capture.html#fixCaptures,openArray[S],Stack[CapFrame[S]],FixMethod	proc fixCaptures[S](s: openArray[S]; capStack: var Stack[CapFrame[S]]; fm: FixMethod): Captures[\n    S]		39
+nim	collectCaptures	npeg/capture.html#collectCaptures,Captures[S]	proc collectCaptures[S](caps: Captures[S]): Captures[S]		70
+nim	collectCapturesRef	npeg/capture.html#collectCapturesRef,Captures	proc collectCapturesRef(caps: Captures): Ref		75
+nim	`[]`	npeg/capture.html#[],Captures[S],int	proc `[]`[S](cs: Captures[S]; i: int): Capture[S]		90
+nim	`[]`	npeg/capture.html#[],Captures[S],BackwardsIndex	proc `[]`[S](cs: Captures[S]; i: BackwardsIndex): Capture[S]		93
+nim	`[]`	npeg/capture.html#[],Captures[S],HSlice[int,int]	proc `[]`[S](cs: Captures[S]; range: HSlice[int, int]): seq[Capture[S]]		96
+nim	items	npeg/capture.html#items.i,Captures[S]	iterator items[S](captures: Captures[S]): Capture[S]		100
+nim	len	npeg/capture.html#len,Captures[S]	proc len[S](captures: Captures[S]): int		104
+nimgrp	[]	npeg/capture.html#[]-procs-all	proc		90

@@ -1,0 +1,25 @@
+nimTitle	progress	npeg/progress.html	module npeg/progress		0
+nim	NPegCancellationError	npeg/progress.html#NPegCancellationError	object NPegCancellationError		68
+nim	ProgressStats	npeg/progress.html#ProgressStats	object ProgressStats		71
+nim	ProgressCallback	npeg/progress.html#ProgressCallback	type ProgressCallback		84
+nim	CancellationCallback	npeg/progress.html#CancellationCallback	type CancellationCallback		86
+nim	tmNone	npeg/progress.html#tmNone	ThrottlingMode.tmNone		89
+nim	tmTime	npeg/progress.html#tmTime	ThrottlingMode.tmTime		89
+nim	tmProgressDelta	npeg/progress.html#tmProgressDelta	ThrottlingMode.tmProgressDelta		89
+nim	ThrottlingMode	npeg/progress.html#ThrottlingMode	enum ThrottlingMode		89
+nim	ProgressTracker	npeg/progress.html#ProgressTracker	type ProgressTracker		95
+nim	ProgressUpdateProc	npeg/progress.html#ProgressUpdateProc	type ProgressUpdateProc		120
+nim	progressUpdateProc	npeg/progress.html#progressUpdateProc_2	var progressUpdateProc		124
+nim	calculateStats	npeg/progress.html#calculateStats,ProgressTracker,int,int	proc calculateStats(tracker: ProgressTracker; currentPos: int; instructionCount: int): ProgressStats		126
+nim	newProgressTracker	npeg/progress.html#newProgressTracker,int,ProgressCallback,float,int,CancellationCallback,int,float	proc newProgressTracker(totalSize: int; callback: ProgressCallback;\n                   reportThreshold = 0.01; updateInterval = 1000;\n                   cancellationToken: CancellationCallback = nil;\n                   throttlingMode = tmNone; throttleTimeMs = 100;\n                   minProgressDelta = 0.01): ProgressTracker		256
+nim	updateProgress	npeg/progress.html#updateProgress,ProgressTracker,int	proc updateProgress(tracker: ProgressTracker; currentPos: int)		297
+nim	resetProgress	npeg/progress.html#resetProgress,ProgressTracker	proc resetProgress(tracker: ProgressTracker)		316
+nim	enableProgressTracking	npeg/progress.html#enableProgressTracking,ProgressTracker,bool	proc enableProgressTracking(tracker: ProgressTracker; enabled: bool)		333
+nim	configureThrottling	npeg/progress.html#configureThrottling,ProgressTracker,ThrottlingMode,int,float	proc configureThrottling(tracker: ProgressTracker; mode: ThrottlingMode;\n                    timeMs: int = 100; progressDelta: float = 0.01)		338
+nim	isCancelled	npeg/progress.html#isCancelled,ProgressTracker	proc isCancelled(tracker: ProgressTracker): bool		350
+nim	manualCancel	npeg/progress.html#manualCancel,ProgressTracker	proc manualCancel(tracker: ProgressTracker)		359
+nim	getStatistics	npeg/progress.html#getStatistics,ProgressTracker,int,int	proc getStatistics(tracker: ProgressTracker; currentPos: int; instructionCount: int): ProgressStats		364
+nim	formatSize	npeg/progress.html#formatSize,int	proc formatSize(bytes: int): string		379
+nim	formatDuration	npeg/progress.html#formatDuration,float	proc formatDuration(seconds: float): string		396
+nim	formatSpeed	npeg/progress.html#formatSpeed,float	proc formatSpeed(bytesPerSecond: float): string		420
+nim	formatStats	npeg/progress.html#formatStats,ProgressStats	proc formatStats(stats: ProgressStats): string		439

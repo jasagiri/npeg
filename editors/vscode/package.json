@@ -1,0 +1,149 @@
+{
+  "name": "npeg-language",
+  "displayName": "NPeg Language Support",
+  "description": "Syntax highlighting, diagnostics, and autocompletion for NPeg grammar files",
+  "version": "0.1.0",
+  "publisher": "npeg",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "npeg",
+    "grammar",
+    "peg",
+    "nim",
+    "parser"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zevv/npeg"
+  },
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "npeg",
+        "aliases": [
+          "NPeg",
+          "npeg"
+        ],
+        "extensions": [
+          ".npeg"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "npeg",
+        "scopeName": "source.npeg",
+        "path": "./syntaxes/npeg.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "npeg.visualizeGrammar",
+        "title": "NPeg: Visualize Grammar"
+      },
+      {
+        "command": "npeg.validateGrammar",
+        "title": "NPeg: Validate Grammar"
+      },
+      {
+        "command": "npeg.generateParser",
+        "title": "NPeg: Generate Nim Parser Code"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "NPeg Language Configuration",
+      "properties": {
+        "npeg.languageServer.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable the NPeg language server"
+        },
+        "npeg.languageServer.path": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the NPeg language server executable"
+        },
+        "npeg.trace.server": {
+          "type": "string",
+          "enum": [
+            "off",
+            "messages",
+            "verbose"
+          ],
+          "default": "off",
+          "description": "Traces the communication between VS Code and the NPeg language server"
+        },
+        "npeg.visualization.railroadDiagramStyle": {
+          "type": "string",
+          "enum": [
+            "compact",
+            "extended",
+            "detailed"
+          ],
+          "default": "extended",
+          "description": "Style of railroad diagrams for grammar visualization"
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "npeg.visualizeGrammar",
+        "key": "ctrl+alt+v",
+        "mac": "cmd+alt+v",
+        "when": "editorLangId == npeg"
+      },
+      {
+        "command": "npeg.validateGrammar",
+        "key": "ctrl+alt+c",
+        "mac": "cmd+alt+c",
+        "when": "editorLangId == npeg"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorLangId == npeg",
+          "command": "npeg.visualizeGrammar",
+          "group": "navigation"
+        },
+        {
+          "when": "editorLangId == npeg",
+          "command": "npeg.validateGrammar",
+          "group": "navigation"
+        },
+        {
+          "when": "editorLangId == npeg",
+          "command": "npeg.generateParser",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint . --ext .ts,.tsx",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "@types/vscode": "^1.60.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "eslint": "^8.13.0",
+    "typescript": "^4.7.2"
+  }
+}

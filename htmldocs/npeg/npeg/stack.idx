@@ -1,0 +1,10 @@
+nimTitle	stack	npeg/stack.html	module npeg/stack		0
+nim	Stack	npeg/stack.html#Stack	object Stack		8
+nim	`$`	npeg/stack.html#$,Stack[T]	proc `$`[T](s: Stack[T]): string		15
+nim	initStack	npeg/stack.html#initStack,string,int,int	proc initStack[T](name: string; len: int; max: int = int.high): Stack[T]		19
+nim	grow	npeg/stack.html#grow,Stack[T]	proc grow[T](s: var Stack[T])		24
+nim	push	npeg/stack.html#push.t,Stack[T],T	template push[T](s: var Stack[T]; frame: T)		30
+nim	pop	npeg/stack.html#pop.t,Stack[T]	template pop[T](s: var Stack[T]): T		35
+nim	peek	npeg/stack.html#peek.t,Stack[T]	template peek[T](s: Stack[T]): T		40
+nim	`[]`	npeg/stack.html#[].t,Stack[T],int	template `[]`[T](s: Stack[T]; idx: int): T		44
+nim	update	npeg/stack.html#update.t,Stack[T],untyped,untyped	template update[T](s: Stack[T]; field: untyped; val: untyped)		48
