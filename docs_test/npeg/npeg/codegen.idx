@@ -1,0 +1,10 @@
+nimTitle	codegen	npeg/codegen.html	module npeg/codegen		0
+nim	ProgressTracker	npeg/codegen.html#ProgressTracker	type ProgressTracker		10
+nim	ProgressUpdateProc	npeg/codegen.html#ProgressUpdateProc	type ProgressUpdateProc		13
+nim	updateProgressWithInstructionCount	npeg/codegen.html#updateProgressWithInstructionCount	var updateProgressWithInstructionCount		16
+nim	MatchResult	npeg/codegen.html#MatchResult	object MatchResult		31
+nim	MatchState	npeg/codegen.html#MatchState	object MatchState		37
+nim	Parser	npeg/codegen.html#Parser	object Parser		49
+nim	genCasesCode	npeg/codegen.html#genCasesCode,Program,NimNode,NimNode,NimNode,NimNode,NimNode,NimNode,NimNode,NimNode	proc genCasesCode(program: Program; sType, uType, uId: NimNode;\n             ms, s, si, simax, ip: NimNode): NimNode		102
+nim	genTraceCode	npeg/codegen.html#genTraceCode,Program,NimNode,NimNode,NimNode,NimNode,NimNode,NimNode,NimNode,NimNode	proc genTraceCode(program: Program; sType, uType, uId, ms, s, si, simax, ip: NimNode): NimNode		323
+nim	genCode	npeg/codegen.html#genCode,Program,NimNode,NimNode,NimNode	proc genCode(program: Program; sType, uType, uId: NimNode): NimNode		388

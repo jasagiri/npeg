@@ -1,0 +1,19 @@
+nimTitle	npeg	npeg.html	module npeg		0
+nim	peg	npeg.html#peg.m,untyped,untyped	macro peg(name: untyped; n: untyped): untyped		100
+nim	peg	npeg.html#peg.m,untyped,untyped,untyped	macro peg(name: untyped; userData: untyped; n: untyped): untyped		106
+nim	peg	npeg.html#peg.m,untyped,untyped,untyped,untyped	macro peg(name: untyped; subjectType, userData, n: untyped): untyped		116
+nim	patt	npeg.html#patt.t,untyped	template patt(n: untyped): untyped		129
+nim	patt	npeg.html#patt.t,untyped,untyped	template patt(n: untyped; code: untyped): untyped		136
+nim	grammar	npeg.html#grammar.m,untyped,untyped	macro grammar(libNameNode: untyped; n: untyped)		145
+nim	match	npeg.html#match,Parser,openArray[S],T,ref ProgressTracker:ObjectType	proc match[S, T](p: Parser; s: openArray[S]; userData: var T;\n            progressTracker: progress.ProgressTracker = nil): MatchResult[S]		153
+nim	match	npeg.html#match,Parser,openArray[S],ref ProgressTracker:ObjectType	proc match[S](p: Parser; s: openArray[S];\n         progressTracker: progress.ProgressTracker = nil): MatchResult[S]		190
+nim	matchFile	npeg.html#matchFile,Parser,string,T,ref ProgressTracker:ObjectType	proc matchFile[T](p: Parser; fname: string; userData: var T;\n             progressTracker: progress.ProgressTracker = nil): MatchResult[char]		206
+nim	matchFile	npeg.html#matchFile,Parser,string,ref ProgressTracker:ObjectType	proc matchFile(p: Parser; fname: string;\n          progressTracker: progress.ProgressTracker = nil): MatchResult[char]		244
+nim	captures	npeg.html#captures,MatchResult[char]	proc captures(mr: MatchResult[char]): seq[string]		256
+nim	captures	npeg.html#captures,MatchResult[S]	proc captures[S](mr: MatchResult[S]): seq[S]		261
+nim	nimBug22740	npeg.html#nimBug22740.t	template nimBug22740()		266
+nimgrp	matchfile	npeg.html#matchFile-procs-all	proc		206
+nimgrp	match	npeg.html#match-procs-all	proc		153
+nimgrp	captures	npeg.html#captures-procs-all	proc		256
+nimgrp	peg	npeg.html#peg-macros-all	macro		100
+nimgrp	patt	npeg.html#patt-templates-all	template		129

@@ -1,0 +1,3 @@
+nimTitle	parsepatt	npeg/parsepatt.html	module npeg/parsepatt		0
+nim	parsePatt	npeg/parsepatt.html#parsePatt,string,NimNode,Grammar,Dot	proc parsePatt(pattName: string; nn: NimNode; grammar: Grammar; dot: Dot = nil): Patt		14
+nim	parseGrammar	npeg/parsepatt.html#parseGrammar,NimNode,Dot	proc parseGrammar(ns: NimNode; dot: Dot = nil; dumpRailroad = true): Grammar		187

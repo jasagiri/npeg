@@ -1,0 +1,6 @@
+nimTitle	dot	npeg/dot.html	module npeg/dot		0
+nim	Dot	npeg/dot.html#Dot	type Dot		6
+nim	newDot	npeg/dot.html#newDot,string	proc newDot(name: string): Dot		20
+nim	add	npeg/dot.html#add,Dot,string,string,string	proc add(d: Dot; n1, n2: string; meth: string)		23
+nim	addPatt	npeg/dot.html#addPatt,Dot,string,int	proc addPatt(d: Dot; name: string; len: int)		28
+nim	dump	npeg/dot.html#dump,Dot	proc dump(d: Dot)		36

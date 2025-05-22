@@ -1,0 +1,30 @@
+nimTitle	patt	npeg/patt.html	module npeg/patt		0
+nim	newPatt	npeg/patt.html#newPatt,string	proc newPatt(s: string): Patt		78
+nim	newLitPatt	npeg/patt.html#newLitPatt,NimNode	proc newLitPatt(n: NimNode): Patt		82
+nim	newPatt	npeg/patt.html#newPatt,Patt,CapKind,string	proc newPatt(p: Patt; ck: CapKind; name = ""): Patt		85
+nim	newCallPatt	npeg/patt.html#newCallPatt,string	proc newCallPatt(label: string): Patt		92
+nim	newPatt	npeg/patt.html#newPatt,BiggestInt	proc newPatt(n: BiggestInt): Patt		95
+nim	newPatt	npeg/patt.html#newPatt,CharSet	proc newPatt(cs: CharSet): Patt		102
+nim	newBackrefPatt	npeg/patt.html#newBackrefPatt,string	proc newBackrefPatt(refName: string): Patt		105
+nim	newReturnPatt	npeg/patt.html#newReturnPatt	proc newReturnPatt(): Patt		108
+nim	newErrorPatt	npeg/patt.html#newErrorPatt,string	proc newErrorPatt(msg: string): Patt		111
+nim	`?`	npeg/patt.html#?,Patt	proc `?`(p: Patt): Patt		130
+nim	`*`	npeg/patt.html#*,Patt	proc `*`(p: Patt): Patt		133
+nim	`+`	npeg/patt.html#+,Patt	proc `+`(p: Patt): Patt		142
+nim	`>`	npeg/patt.html#>,Patt	proc `>`(p: Patt): Patt		146
+nim	`!`	npeg/patt.html#!,Patt	proc `!`(p: Patt): Patt		149
+nim	`&`	npeg/patt.html#&,Patt	proc `&`(p: Patt): Patt		153
+nim	`@`	npeg/patt.html#@,Patt	proc `@`(p: Patt): Patt		156
+nim	`*`	npeg/patt.html#*,Patt,Patt	proc `*`(p1, p2: Patt): Patt		163
+nim	choice	npeg/patt.html#choice,openArray[Patt]	proc choice(ps: openArray[Patt]): Patt		176
+nim	`-`	npeg/patt.html#-,Patt,Patt	proc `-`(p1, p2: Patt): Patt		198
+nim	newPattAssoc	npeg/patt.html#newPattAssoc,Patt,BiggestInt,Assoc	proc newPattAssoc(p: Patt; prec: BiggestInt; assoc: Assoc): Patt		206
+nim	`{}`	npeg/patt.html#{},Patt,BiggestInt	proc `{}`(p: Patt; n: BiggestInt): Patt		214
+nim	`{}`	npeg/patt.html#{},Patt,HSlice[BiggestInt,BiggestInt]	proc `{}`(p: Patt; range: HSlice[BiggestInt, BiggestInt]): Patt		218
+nimgrp	*	npeg/patt.html#*-procs-all	proc		133
+nimgrp	newpatt	npeg/patt.html#newPatt-procs-all	proc		78
+nimgrp	{}	npeg/patt.html#{}-procs-all	proc		214
+heading	Atoms	npeg/patt.html#atoms	 Atoms		0
+heading	Prefixes	npeg/patt.html#prefixes	 Prefixes		0
+heading	Infixes	npeg/patt.html#infixes	 Infixes		0
+heading	Others	npeg/patt.html#others	 Others		0

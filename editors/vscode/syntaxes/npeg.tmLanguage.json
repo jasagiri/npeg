@@ -1,0 +1,124 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "NPeg",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#keywords" },
+    { "include": "#rule-definitions" },
+    { "include": "#operators" },
+    { "include": "#literals" },
+    { "include": "#character-classes" },
+    { "include": "#capture-marks" },
+    { "include": "#nim-blocks" },
+    { "include": "#references" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.npeg",
+          "match": "#.*$"
+        },
+        {
+          "name": "comment.block.npeg",
+          "begin": "/\\*",
+          "end": "\\*/",
+          "captures": {
+            "0": { "name": "punctuation.definition.comment.npeg" }
+          }
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(peg|patt|grammar)\\b",
+          "name": "keyword.control.declaration.npeg"
+        },
+        {
+          "match": "\\b(Alpha|Digit|Xdigit|Alnum|Lower|Upper|Space|Print|Graph|Blank|Cntrl)\\b",
+          "name": "support.constant.character-class.npeg"
+        }
+      ]
+    },
+    "rule-definitions": {
+      "match": "([a-zA-Z_][a-zA-Z0-9_]*)\\s*(<-)",
+      "captures": {
+        "1": { "name": "entity.name.function.npeg" },
+        "2": { "name": "keyword.operator.assignment.npeg" }
+      }
+    },
+    "operators": {
+      "patterns": [
+        {
+          "match": "(\\*|\\+|\\?|!|&|-|\\||@|\\^|\\^\\^)",
+          "name": "keyword.operator.npeg"
+        }
+      ]
+    },
+    "literals": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.npeg",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.npeg",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.npeg",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.npeg",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "match": "\\b[0-9]+\\b",
+          "name": "constant.numeric.npeg"
+        }
+      ]
+    },
+    "character-classes": {
+      "name": "meta.character-class.npeg",
+      "begin": "{",
+      "end": "}",
+      "patterns": [
+        {
+          "match": "'.'\\.\\.'.+'",
+          "name": "constant.other.character-class.range.npeg"
+        },
+        {
+          "match": "'.+'",
+          "name": "constant.other.character-class.single.npeg"
+        }
+      ]
+    },
+    "capture-marks": {
+      "match": "(>|R\\(\"[^\"]*\"(?:,\\s*)?\\))",
+      "name": "entity.name.tag.capture.npeg"
+    },
+    "nim-blocks": {
+      "begin": ":",
+      "end": "(?=^\\S)",
+      "name": "meta.embedded.block.nim",
+      "patterns": [
+        { "include": "source.nim" }
+      ]
+    },
+    "references": {
+      "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b(?!\\s*<-)",
+      "captures": {
+        "1": { "name": "variable.other.npeg" }
+      }
+    }
+  },
+  "scopeName": "source.npeg"
+}

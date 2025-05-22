@@ -6,7 +6,7 @@
 
 when defined(nimHasUsed): {.used.}
 
-import npeg
+import ../../npeg
 
 grammar "":
   Alnum  <- {'A'..'Z','a'..'z','0'..'9'} # Alphanumeric characters

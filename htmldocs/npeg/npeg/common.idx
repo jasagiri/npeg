@@ -1,0 +1,88 @@
+nimTitle	common	npeg/common.html	module npeg/common		0
+nim	npegPattMaxLen	npeg/common.html#npegPattMaxLen	const npegPattMaxLen		12
+nim	npegInlineMaxLen	npeg/common.html#npegInlineMaxLen	const npegInlineMaxLen		13
+nim	npegRetStackSize	npeg/common.html#npegRetStackSize	const npegRetStackSize		14
+nim	npegBackStackSize	npeg/common.html#npegBackStackSize	const npegBackStackSize		15
+nim	npegOptimize	npeg/common.html#npegOptimize	const npegOptimize		16
+nim	npegDebug	npeg/common.html#npegDebug	const npegDebug		17
+nim	npegTrace	npeg/common.html#npegTrace	const npegTrace		18
+nim	npegExpand	npeg/common.html#npegExpand	const npegExpand		19
+nim	npegGraph	npeg/common.html#npegGraph	const npegGraph		20
+nim	npegGcsafe	npeg/common.html#npegGcsafe	const npegGcsafe		21
+nim	npegStacktrace	npeg/common.html#npegStacktrace	const npegStacktrace		22
+nim	npegOptSets	npeg/common.html#npegOptSets	const npegOptSets		27
+nim	npegOptHeadFail	npeg/common.html#npegOptHeadFail	const npegOptHeadFail		28
+nim	npegOptCapShift	npeg/common.html#npegOptCapShift	const npegOptCapShift		29
+nim	npegOptChoiceCommit	npeg/common.html#npegOptChoiceCommit	const npegOptChoiceCommit		30
+nim	NPegException	npeg/common.html#NPegException	object NPegException		34
+nim	NPegParseError	npeg/common.html#NPegParseError	object NPegParseError		42
+nim	NPegStackOverflowError	npeg/common.html#NPegStackOverflowError	object NPegStackOverflowError		45
+nim	NPegUnknownBackrefError	npeg/common.html#NPegUnknownBackrefError	object NPegUnknownBackrefError		49
+nim	NPegCaptureOutOfRangeError	npeg/common.html#NPegCaptureOutOfRangeError	object NPegCaptureOutOfRangeError		52
+nim	NPegCancellationError	npeg/common.html#NPegCancellationError	object NPegCancellationError		56
+nim	cftOpen	npeg/common.html#cftOpen	CapFrameType.cftOpen		59
+nim	cftClose	npeg/common.html#cftClose	CapFrameType.cftClose		59
+nim	CapFrameType	npeg/common.html#CapFrameType	enum CapFrameType		59
+nim	ckVal	npeg/common.html#ckVal	CapKind.ckVal		61
+nim	ckPushed	npeg/common.html#ckPushed	CapKind.ckPushed		61
+nim	ckCodeBlock	npeg/common.html#ckCodeBlock	CapKind.ckCodeBlock		61
+nim	ckRef	npeg/common.html#ckRef	CapKind.ckRef		61
+nim	CapKind	npeg/common.html#CapKind	enum CapKind		61
+nim	CapFrame	npeg/common.html#CapFrame	object CapFrame		67
+nim	Ref	npeg/common.html#Ref	object Ref		77
+nim	opChr	npeg/common.html#opChr	Opcode.opChr		81
+nim	opLit	npeg/common.html#opLit	Opcode.opLit		81
+nim	opSet	npeg/common.html#opSet	Opcode.opSet		81
+nim	opAny	npeg/common.html#opAny	Opcode.opAny		81
+nim	opNop	npeg/common.html#opNop	Opcode.opNop		81
+nim	opSpan	npeg/common.html#opSpan	Opcode.opSpan		81
+nim	opChoice	npeg/common.html#opChoice	Opcode.opChoice		81
+nim	opCommit	npeg/common.html#opCommit	Opcode.opCommit		81
+nim	opCall	npeg/common.html#opCall	Opcode.opCall		81
+nim	opJump	npeg/common.html#opJump	Opcode.opJump		81
+nim	opReturn	npeg/common.html#opReturn	Opcode.opReturn		81
+nim	opFail	npeg/common.html#opFail	Opcode.opFail		81
+nim	opCapOpen	npeg/common.html#opCapOpen	Opcode.opCapOpen		81
+nim	opCapClose	npeg/common.html#opCapClose	Opcode.opCapClose		81
+nim	opBackref	npeg/common.html#opBackref	Opcode.opBackref		81
+nim	opErr	npeg/common.html#opErr	Opcode.opErr		81
+nim	opPrecPush	npeg/common.html#opPrecPush	Opcode.opPrecPush		81
+nim	opPrecPop	npeg/common.html#opPrecPop	Opcode.opPrecPop		81
+nim	Opcode	npeg/common.html#Opcode	enum Opcode		81
+nim	CharSet	npeg/common.html#CharSet	type CharSet		101
+nim	assocLeft	npeg/common.html#assocLeft	Assoc.assocLeft		103
+nim	assocRight	npeg/common.html#assocRight	Assoc.assocRight		103
+nim	Assoc	npeg/common.html#Assoc	enum Assoc		103
+nim	Inst	npeg/common.html#Inst	object Inst		105
+nim	Patt	npeg/common.html#Patt	type Patt		139
+nim	Symbol	npeg/common.html#Symbol	object Symbol		141
+nim	SymTab	npeg/common.html#SymTab	object SymTab		147
+nim	Rule	npeg/common.html#Rule	object Rule		150
+nim	Program	npeg/common.html#Program	object Program		156
+nim	Template	npeg/common.html#Template	type Template		160
+nim	Grammar	npeg/common.html#Grammar	type Grammar		165
+nim	add	npeg/common.html#add,SymTab,int,string,string,LineInfo	proc add(s: var SymTab; ip: int; name: string; repr: string = "";\n    lineInfo: LineInfo = LineInfo())		173
+nim	`[]`	npeg/common.html#[],SymTab,int	proc `[]`(s: SymTab; ip: int): Symbol		177
+nim	`[]`	npeg/common.html#[],SymTab,string	proc `[]`(s: SymTab; name: string): Symbol		182
+nim	contains	npeg/common.html#contains,SymTab,int	proc contains(s: SymTab; ip: int): bool		187
+nim	contains	npeg/common.html#contains,SymTab,string	proc contains(s: SymTab; name: string): bool		192
+nim	setKrakNode	npeg/common.html#setKrakNode,NimNode	proc setKrakNode(n: NimNode)		204
+nim	krak	npeg/common.html#krak.t,NimNode,string	template krak(n: NimNode; msg: string)		207
+nim	krak	npeg/common.html#krak.t,string	template krak(msg: string)		210
+nim	subStrCmp	npeg/common.html#subStrCmp,openArray[char],int,int,string	proc subStrCmp(s: openArray[char]; slen: int; si: int; s2: string): bool		218
+nim	subIStrCmp	npeg/common.html#subIStrCmp,openArray[char],int,int,string	proc subIStrCmp(s: openArray[char]; slen: int; si: int; s2: string): bool		227
+nim	truncate	npeg/common.html#truncate,string,int	proc truncate(s: string; len: int): string		236
+nim	flattenChoice	npeg/common.html#flattenChoice,NimNode,NimNode	proc flattenChoice(n: NimNode; nChoice: NimNode = nil): NimNode		245
+nim	escapeChar	npeg/common.html#escapeChar,char	proc escapeChar(c: char): string		264
+nim	dumpSet	npeg/common.html#dumpSet,CharSet	proc dumpSet(cs: CharSet): string		273
+nim	dumpSubject	npeg/common.html#dumpSubject,openArray[S],int,int	proc dumpSubject[S](s: openArray[S]; o: int = 0; l: int = 1024): string		291
+nim	`$`	npeg/common.html#$,Inst,int	proc `$`(i: Inst; ip = 0): string		305
+nim	`$`	npeg/common.html#$,Program	proc `$`(program: Program): string		330
+nim	slice	npeg/common.html#slice,openArray[char],int,int	proc slice(s: openArray[char]; iFrom, iTo: int): string		337
+nim	slice	npeg/common.html#slice,openArray[S],int,int	proc slice[S](s: openArray[S]; iFrom, iTo: int): S		343
+nim	`$`	npeg/common.html#$,Template	proc `$`(t: Template): string		346
+nimgrp	$	npeg/common.html#$-procs-all	proc		305
+nimgrp	contains	npeg/common.html#contains-procs-all	proc		187
+nimgrp	[]	npeg/common.html#[]-procs-all	proc		177
+nimgrp	slice	npeg/common.html#slice-procs-all	proc		337
+nimgrp	krak	npeg/common.html#krak-templates-all	template		207
